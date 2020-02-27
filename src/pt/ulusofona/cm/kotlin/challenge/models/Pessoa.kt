@@ -31,6 +31,7 @@ class Pessoa(val nome: String, val dataNascimento: Date) {
             }
         }
     }
+    
 
     fun temCarta(): Boolean {
         return true
