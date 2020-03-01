@@ -20,7 +20,7 @@ class Pessoa(val nome: String, val dataDeNascimento: Date) : Movimentavel {
     val dataDeNascimentoToString = formatarData(dataDeNascimento)
 
     fun comprarVeiculo(veiculo: Veiculo) {
-        veiculo.dataDeAquisicao = LocalDate.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy")).toString()
+        veiculo.dataDeAquisicao = Date()
         veiculos.add(veiculo)
     }
 
@@ -39,7 +39,9 @@ class Pessoa(val nome: String, val dataDeNascimento: Date) : Movimentavel {
             val veiculo = iterator.next()
             if (identificador.equals(veiculo.indetificador)) {
                 comprador.veiculos.add(veiculo)
-                veiculo.dataDeAquisicao = LocalDate.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy")).toString()
+                //veiculo.dataDeAquisicao = LocalDate.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy"))
+                val data = Date()
+                veiculo.dataDeAquisicao = data
                 iterator.remove()
                 return
             }

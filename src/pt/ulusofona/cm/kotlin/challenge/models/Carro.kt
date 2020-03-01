@@ -44,7 +44,7 @@ class Carro(indetificador: String, motor: Motor) : Veiculo(indetificador), Movim
 
 
     override fun toString(): String =
-        "Carro | $identificador | $dataDeAquisicao | Posicao | x:${posicao.x} | y:${posicao.y}"
+        "Carro | $identificador | $dataDeAquisicaoToString | Posicao | x:${posicao.x} | y:${posicao.y}"
 
 
 }

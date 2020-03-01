@@ -13,5 +13,5 @@ class Bicicleta(indetificador: String) : Veiculo(indetificador), Movimentavel {
 
 
     override fun toString(): String =
-        "Bicicleta | $identificador | $dataDeAquisicao | Posicao | x:${posicao.x} | y:${posicao.y}"
+        "Bicicleta | $identificador | $dataDeAquisicaoToString | Posicao | x:${posicao.x} | y:${posicao.y}"
 }
