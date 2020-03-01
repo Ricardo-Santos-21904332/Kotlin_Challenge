@@ -39,7 +39,6 @@ class Pessoa(val nome: String, val dataDeNascimento: Date) : Movimentavel {
             val veiculo = iterator.next()
             if (identificador.equals(veiculo.indetificador)) {
                 comprador.veiculos.add(veiculo)
-                //veiculo.dataDeAquisicao = LocalDate.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy"))
                 val data = Date()
                 veiculo.dataDeAquisicao = data
                 iterator.remove()
@@ -97,17 +96,12 @@ class Pessoa(val nome: String, val dataDeNascimento: Date) : Movimentavel {
         val formatter: DateFormat = SimpleDateFormat("dd-MM-yyyy")
         val aux5 = formatter.format(dataDeNascimento)
         val aux = aux5.split("-").toTypedArray()
-        val dia = aux[0]
-        val mes = aux[1]
         val ano = aux[2]
         val aux2: String = LocalDate.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy")).toString()
         val aux3 = aux2.split("-")
-        val dia1 = aux3[0]
-        val mes1 = aux3[1]
         val ano1 = aux3[2]
         val idade = (Integer.parseInt(ano1) - Integer.parseInt(ano))
         return idade
-
     }
 
     override fun toString(): String =

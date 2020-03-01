@@ -40,8 +40,6 @@ fun main() {
     println(pessoa2.calculaIdade())
     pessoa2.moverVeiculoPara("29", 30, 10)
     println(pessoa2.veiculos)
-
-
     println("Antes Venda do veiculo 29")
     println("Lista Ricardo ${pessoa.veiculos} ")
     println("Lista Zé ${pessoa2.veiculos} ")

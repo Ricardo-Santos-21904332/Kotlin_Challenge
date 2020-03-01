@@ -3,8 +3,6 @@ package pt.ulusofona.cm.kotlin.challenge.models
 import pt.ulusofona.cm.kotlin.challenge.interfaces.Movimentavel
 import java.text.DateFormat
 import java.text.SimpleDateFormat
-import java.time.LocalDate
-import java.time.format.DateTimeFormatter
 import java.util.*
 
 abstract class Veiculo(val indetificador: String) : Movimentavel {
@@ -24,7 +22,9 @@ abstract class Veiculo(val indetificador: String) : Movimentavel {
     override fun moverPara(x: Int, y: Int) {
     }
 
-    override fun toString(): String = "$identificador | $dataDeAquisicaoToString | Posicao | x:${posicao.x} | y:${posicao.y}"
+    override fun toString(): String =
+        "$identificador | $dataDeAquisicaoToString | Posicao | x:${posicao.x} | y:${posicao.y}"
+
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (javaClass != other?.javaClass) return false
